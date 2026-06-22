@@ -24,7 +24,7 @@ async function createusuarioService(novousuario) {
     return usuario;
 }
 async function updateusuarioService(id, usuarioAtualizado) {
-    const usuario = await usuarioRepository.findusuarioByIdRepository(id);if (!produto) {
+    const usuario = await usuarioRepository.findusuarioByIdRepository(id);if (!usuario) {
         throw new Error("usuario não encontrado!");
     }
 
@@ -54,7 +54,7 @@ async function deleteusuarioService(id) {
 
 export default {
     findAllusuarioService,
-    findusuariobyidservice,
+    findusuarioByIdService,
     createusuarioService,
     updateusuarioService,
     deleteusuarioService
